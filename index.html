@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <title>Metrotimer</title>
+  </head>
+  <body>
+    <video autoplay muted loop id="myVideo" class="bg-video">
+      <source src="assets/video.mp4" type="video/mp4" />
+    </video>
+
+    <div class="container">
+      <h1 class="title">MetroTimer</h1>
+
+      <div class="timer">
+        <div class="form-control">
+          <input
+            type="text"
+            class="timer__input"
+            value="00"
+            maxlength="2"
+            id="minutes"
+          />
+          <label for="minutes">minutos</label>
+        </div>
+
+        <div class="form-control">
+          <input
+            type="text"
+            class="timer__input"
+            value="00"
+            maxlength="2"
+            id="seconds"
+          />
+          <label for="seconds">segundos</label>
+        </div>
+      </div>
+
+      <div class="separator"></div>
+
+      <div class="metronome">
+        <div class="flex">
+          <div class="metronome__tempo-container">
+            <span class="metronome__tempo">100</span>
+            <span class="metronome__bpm">bpm</span>
+          </div>
+
+          <div class="action-btn">
+            <img src="assets/play.svg" alt="Start" class="play-icon" />
+            <img src="assets/pause.svg" alt="Stop" class="pause-icon" />
+          </div>
+        </div>
+
+        <div class="metronome__tempo-settings">
+          <div class="metronome__tempo-btn decrease-btn">
+            <span class="one"></span>
+          </div>
+          <input
+            type="range"
+            value="100"
+            min="20"
+            max="500"
+            step="1"
+            class="metronome__tempo-slider"
+          />
+          <div class="metronome__tempo-btn increase-btn">
+            <span class="one"></span>
+            <span class="two"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="copyright">Designed and Developed By Riquelme Bandeira</p>
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
