@@ -21,27 +21,21 @@
     <div class="container">
       <h1 class="title">MetroTimer</h1>
 
+      <div class="timer__display hide"></div>
       <div class="timer">
         <div class="form-control">
-          <input
-            type="text"
-            class="timer__input"
-            value="00"
-            maxlength="2"
-            id="minutes"
-          />
+          <input type="number" class="timer__input" value="00" id="minutes" />
           <label for="minutes">minutos</label>
         </div>
 
         <div class="form-control">
-          <input
-            type="text"
-            class="timer__input"
-            value="00"
-            maxlength="2"
-            id="seconds"
-          />
+          <input type="number" class="timer__input" value="00" id="seconds" />
           <label for="seconds">segundos</label>
+        </div>
+
+        <div class="action-btn" id="start-timer-btn">
+          <img src="assets/play.svg" alt="Start" class="play-icon" />
+          <img src="assets/pause.svg" alt="Stop" class="pause-icon" />
         </div>
       </div>
 
@@ -54,7 +48,7 @@
             <span class="metronome__bpm">bpm</span>
           </div>
 
-          <div class="action-btn">
+          <div class="action-btn" id="start-metronome-btn">
             <img src="assets/play.svg" alt="Start" class="play-icon" />
             <img src="assets/pause.svg" alt="Stop" class="pause-icon" />
           </div>

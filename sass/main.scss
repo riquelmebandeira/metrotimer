@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+.hide {
+  display: none !important;
+}
+
 :root {
   --color-white: white;
 }
@@ -242,4 +246,16 @@ input[type="range"]:focus::-moz-range-thumb {
   position: absolute;
   bottom: 2%;
   right: 1%;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }
