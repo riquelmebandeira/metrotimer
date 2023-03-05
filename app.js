@@ -66,7 +66,6 @@ let timer = null;
 inputMinutes.onchange = function () {
   minutes = +inputMinutes.value;
   timeout = minutes * 60000 + seconds * 1000;
-  // console.log(timeout);
 };
 
 inputSeconds.onchange = function () {
@@ -75,10 +74,9 @@ inputSeconds.onchange = function () {
 };
 
 function updateTimer() {
-  console.log("olá");
   timeout -= 1000;
-  inputMinutes.value = Math.floor(timeout / 60000).toString();
-  inputSeconds.value = ((timeout % 60000) / 1000).toString();
+  inputMinutes.value = Math.floor(timeout / 60000);
+  inputSeconds.value = ((timeout % 60000) / 1000).toFixed(0);
 }
 
 startTimerBtn.onclick = function () {
@@ -86,7 +84,7 @@ startTimerBtn.onclick = function () {
     updateTimer();
     timer = setInterval(() => {
       updateTimer();
-      if (--timeout < 0) {
+      if (timeout - 1000 < 0) {
         clearInterval(timer);
         isActive = false;
       }
@@ -96,5 +94,4 @@ startTimerBtn.onclick = function () {
     clearInterval(timer);
     isActive = false;
   }
-  // console.log(minutes, seconds);
 };
