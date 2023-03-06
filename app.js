@@ -72,6 +72,14 @@ inputSeconds.onchange = function () {
   timeout = minutes * 60000 + seconds * 1000;
 };
 
+inputMinutes.onblur = function () {
+  if (!inputMinutes.value) inputMinutes.value = 0
+}
+
+inputSeconds.onblur = function () {
+  if (!inputSeconds.value) inputSeconds.value = 0
+}
+
 function updateTimer() {
   timeout -= 1000;
   inputMinutes.value = Math.floor(timeout / 60000);
