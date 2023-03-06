@@ -61,7 +61,6 @@ let minutes = 0;
 let seconds = 0;
 let timeout = 0;
 let isActive = false;
-let timer = null;
 
 inputMinutes.onchange = function () {
   minutes = +inputMinutes.value;
@@ -79,19 +78,15 @@ function updateTimer() {
   inputSeconds.value = ((timeout % 60000) / 1000).toFixed(0);
 }
 
+const countdown = new Timer(updateTimer, 1000, { immediate: true })
+
 startTimerBtn.onclick = function () {
   if (!isActive) {
-    updateTimer();
-    timer = setInterval(() => {
-      updateTimer();
-      if (timeout - 1000 < 0) {
-        clearInterval(timer);
-        isActive = false;
-      }
-    }, 1000);
+    countdown.totalTime = timeout
+    countdown.start()
     isActive = true;
   } else {
-    clearInterval(timer);
+    countdown.stop()
     isActive = false;
   }
 };
