@@ -81,6 +81,18 @@ inputSeconds.onblur = function () {
   if (!inputSeconds.value) inputSeconds.value = 0
 }
 
+inputMinutes.oninput = function() {
+  if (this.value.length > 2) {
+    this.value = this.value.slice(0,2); 
+  }
+}
+
+inputSeconds.oninput = function() {
+  if (this.value.length > 2) {
+    this.value = this.value.slice(0,2); 
+  }
+}
+
 function updateTimer() {
   timeout -= 1000;
   inputMinutes.value = Math.floor(timeout / 60000);
