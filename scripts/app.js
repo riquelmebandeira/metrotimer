@@ -9,7 +9,7 @@ const metronomeBtn = document.querySelector("#start-metronome-btn");
 
 let bpm = 100;
 let isRunning = false;
-const click = new Audio("click.mp3");
+const click = new Audio("assets/click.mp3");
 
 decreaseBtn.onclick = function () {
   if (bpm <= 20) return;
