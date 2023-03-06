@@ -1,10 +1,11 @@
 import Timer from "./timer.js";
 
+////////// METRONOME //////////
 const tempoDisplay = document.querySelector(".metronome__tempo");
 const tempoSlider = document.querySelector(".metronome__tempo-slider");
 const increaseBtn = document.querySelector(".increase-btn");
 const decreaseBtn = document.querySelector(".decrease-btn");
-const actionBtn = document.querySelector("#start-metronome-btn");
+const metronomeBtn = document.querySelector("#start-metronome-btn");
 
 let bpm = 100;
 let isRunning = false;
@@ -41,7 +42,7 @@ function playClick() {
 
 const metronome = new Timer(playClick, 60000 / bpm, { immediate: true });
 
-actionBtn.onclick = function () {
+metronomeBtn.onclick = function () {
   if (!isRunning) {
     metronome.start();
     isRunning = true;
@@ -49,13 +50,13 @@ actionBtn.onclick = function () {
     metronome.stop();
     isRunning = false;
   }
-  actionBtn.classList.toggle("on");
+  metronomeBtn.classList.toggle("on");
 };
 
 ////////// TIMER //////////
 const inputMinutes = document.querySelector("#minutes");
 const inputSeconds = document.querySelector("#seconds");
-const startTimerBtn = document.querySelector("#start-timer-btn");
+const timerBtn = document.querySelector("#start-timer-btn");
 
 let minutes = 0;
 let seconds = 0;
@@ -84,19 +85,25 @@ function updateTimer() {
   timeout -= 1000;
   inputMinutes.value = Math.floor(timeout / 60000);
   inputSeconds.value = ((timeout % 60000) / 1000).toFixed(0);
+  if (timeout < 1000) {
+    timerBtn.classList.toggle("on");
+    isActive = false;
+  }
 }
 
 const countdown = new Timer(updateTimer, 1000, { immediate: true })
 
-startTimerBtn.onclick = function () {
+timerBtn.onclick = function () {
   if (!isActive && timeout) {
     countdown.totalTime = timeout
     countdown.start()
     isActive = true;
+    timerBtn.classList.toggle("on");
   } else if (!isActive && !timeout) {
     inputMinutes.select()
-  } else {
+  } else if (isActive && timeout) {
     countdown.stop()
     isActive = false;
+    timerBtn.classList.toggle("on");
   }
 };
