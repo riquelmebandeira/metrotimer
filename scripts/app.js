@@ -97,7 +97,9 @@ inputSeconds.oninput = function() {
 function updateTimer() {
   timeout -= 1000;
   inputMinutes.value = Math.floor(timeout / 60000);
+  minutes = Math.floor(timeout / 60000);
   inputSeconds.value = ((timeout % 60000) / 1000).toFixed(0);
+  seconds = ((timeout % 60000) / 1000).toFixed(0);
   checkIfTimesUp()
 }
 
