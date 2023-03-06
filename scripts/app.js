@@ -62,6 +62,7 @@ let minutes = 0;
 let seconds = 0;
 let timeout = 0;
 let isActive = false;
+const bell = new Audio('assets/bell.wav')
 
 inputMinutes.onchange = function () {
   minutes = +inputMinutes.value;
@@ -104,6 +105,11 @@ function checkIfTimesUp() {
   if (timeout < 1000) {
     timerBtn.classList.toggle("on");
     isActive = false;
+    bell.play()
+    if (isRunning) {
+      metronome.stop()
+      metronomeBtn.classList.toggle("on");
+    }
   }
 }
 
