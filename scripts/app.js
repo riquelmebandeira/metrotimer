@@ -97,6 +97,10 @@ function updateTimer() {
   timeout -= 1000;
   inputMinutes.value = Math.floor(timeout / 60000);
   inputSeconds.value = ((timeout % 60000) / 1000).toFixed(0);
+  checkIfTimesUp()
+}
+
+function checkIfTimesUp() {
   if (timeout < 1000) {
     timerBtn.classList.toggle("on");
     isActive = false;
