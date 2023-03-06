@@ -1,6 +1,7 @@
 #start-timer-btn {
   margin-top: 1rem;
   margin-left: auto;
+  bottom: 0;
 }
 
 .action-btn {
@@ -37,6 +38,15 @@
   display: none;
 }
 
+@media only screen and (max-width: 25em) {
+  #start-timer-btn {
+    position: absolute;
+    bottom: -3rem;
+  }
+  .action-btn {
+    background-color: transparent;
+  }
+}
 .metronome__tempo-container {
   margin-right: auto;
 }
@@ -71,6 +81,7 @@
 }
 
 .form-control {
+  margin: auto;
   text-align: center;
 }
 .form-control input {
@@ -101,12 +112,34 @@
   margin-left: 6rem;
 }
 
+@media only screen and (max-width: 31.25em) {
+  .form-control input {
+    font-size: 6.4rem;
+    width: 15rem;
+    height: 15rem;
+  }
+  .form-control + .form-control {
+    margin-left: 3rem;
+  }
+}
+@media only screen and (max-width: 25em) {
+  .form-control label {
+    display: none;
+  }
+}
 .timer {
   display: flex;
   justify-content: center;
   padding-left: 7rem;
+  position: relative;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .timer {
+    padding-left: 0;
+    margin-top: 3rem;
+  }
+}
 .bg-video {
   top: 0;
   left: 0;
@@ -122,8 +155,8 @@
   color: var(--color-white);
   font-size: 1.6rem;
   position: absolute;
-  bottom: 2%;
-  right: 1%;
+  bottom: 1rem;
+  right: 1rem;
 }
 
 * {
@@ -143,6 +176,21 @@
 html {
   font-family: "Inter", sans-serif;
   font-size: 62.5%;
+}
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  html {
+    font-size: 75%;
+  }
 }
 
 body {
@@ -226,17 +274,41 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+@media only screen and (max-width: 34.37em) {
+  input[type=range] {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 25em) {
+  input[type=range] {
+    width: 70%;
+  }
+}
 .title {
   color: var(--color-white);
   font-weight: 600;
   font-size: 3.6rem;
   position: absolute;
-  top: -2.5rem;
   background-color: #543466;
   padding: 0 1rem;
+  top: -2.5rem;
   left: 3rem;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .title {
+    position: static;
+    padding: 0;
+    background-color: transparent;
+    margin-top: 2rem;
+    font-size: 3.6rem;
+  }
+}
+@media only screen and (max-width: 31.25em) {
+  .title {
+    font-size: 2.8rem;
+  }
+}
 .container {
   max-width: 72rem;
   padding: 5rem 3rem;
@@ -255,6 +327,14 @@ input[type=number] {
 .separator {
   border-bottom: 2px solid var(--color-white);
   margin: 5rem 0;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .container {
+    border: none;
+    padding: 0 2rem;
+    margin-top: 0;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

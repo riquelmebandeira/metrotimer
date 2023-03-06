@@ -15,6 +15,18 @@
 html {
   font-family: "Inter", sans-serif;
   font-size: 62.5%; // 1rem = 10px;
+
+  @media only screen and (max-width: 1200px) { 
+    font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+  }
+
+  @media only screen and (max-width: 900px) { 
+    font-size: 50%; //1 rem = 8px, 8/16 = 50%
+  }
+  
+  @media only screen and (min-width: 1800px) { 
+    font-size: 75%; //1rem = 12, 12/16
+  }
 }
 
 body {
@@ -96,4 +108,17 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type="number"] {
   -moz-appearance: textfield;
+}
+
+
+@media only screen and (max-width: 34.37em) {
+  input[type="range"] {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 25em) {
+  input[type="range"] {
+    width: 70%;
+  }
 }

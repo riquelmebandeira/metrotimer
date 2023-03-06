@@ -1,6 +1,7 @@
 #start-timer-btn {
   margin-top: 1rem;
   margin-left: auto;
+  bottom: 0;
 }
 
 .action-btn {
@@ -37,4 +38,15 @@
   width: 3rem;
   fill: var(--color-white);
   display: none;
+}
+
+@media only screen and (max-width: 25em) {
+  #start-timer-btn {
+    position: absolute;
+    bottom: -3rem;
+  }
+
+  .action-btn {
+    background-color: transparent;
+  }
 }
