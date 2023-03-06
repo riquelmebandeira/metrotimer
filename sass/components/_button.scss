@@ -1,0 +1,40 @@
+#start-timer-btn {
+  margin-top: 1rem;
+  margin-left: auto;
+}
+
+.action-btn {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: #9289a9;
+  cursor: pointer;
+  font-size: 2rem;
+  position: relative;
+}
+
+.action-btn.on {
+  .play-icon {
+    display: none;
+  }
+  .pause-icon {
+    display: block;
+  }
+}
+
+.play-icon {
+  position: absolute;
+  left: 22%;
+  top: 16%;
+  width: 3.5rem;
+  fill: var(--color-white);
+}
+
+.pause-icon {
+  position: absolute;
+  left: 23%;
+  top: 30%;
+  width: 3rem;
+  fill: var(--color-white);
+  display: none;
+}

@@ -1,0 +1,19 @@
+.container {
+  max-width: 72rem;
+  padding: 5rem 3rem;
+  margin: auto;
+  margin-top: 6rem;
+  border: 2px solid white;
+  border-radius: 2px;
+  position: relative;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.separator {
+  border-bottom: 2px solid var(--color-white);
+  margin: 5rem 0;
+}

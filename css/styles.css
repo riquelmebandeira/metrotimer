@@ -1,96 +1,3 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-.hide {
-  display: none !important;
-}
-
-:root {
-  --color-white: white;
-}
-
-html {
-  font-family: "Inter", sans-serif;
-  font-size: 62.5%;
-}
-
-body {
-  background: #63326e;
-  user-select: none;
-}
-
-.title {
-  color: var(--color-white);
-  font-weight: 600;
-  font-size: 3.6rem;
-  position: absolute;
-  top: -2.5rem;
-  background-color: #543466;
-  padding: 0 1rem;
-  left: 3rem;
-}
-
-.bg-video {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  z-index: -1;
-  opacity: 30%;
-}
-
-.container {
-  max-width: 72rem;
-  padding: 5rem 3rem;
-  margin: auto;
-  margin-top: 6rem;
-  border: 2px solid white;
-  border-radius: 2px;
-  position: relative;
-}
-
-.metronome__tempo-container {
-  margin-right: auto;
-}
-.metronome__tempo {
-  color: var(--color-white);
-  font-size: 6.4rem;
-}
-.metronome__bpm {
-  color: var(--color-white);
-  font-size: 2rem;
-}
-.metronome__tempo-settings {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-  margin-top: 4rem;
-}
-.metronome__tempo-btn {
-  position: relative;
-}
-.metronome__tempo-btn .one,
-.metronome__tempo-btn .two {
-  width: 2.8rem;
-  height: 0.6rem;
-  background-color: #9289a9;
-  display: block;
-}
-.metronome__tempo-btn .two {
-  transform: rotate(-90deg) translateX(6px);
-  position: absolute;
-}
-
-.timer {
-  padding-left: 7rem;
-}
-
 #start-timer-btn {
   margin-top: 1rem;
   margin-left: auto;
@@ -130,9 +37,117 @@ body {
   display: none;
 }
 
-.flex {
+.metronome__tempo-container {
+  margin-right: auto;
+}
+.metronome__tempo {
+  color: var(--color-white);
+  font-size: 6.4rem;
+}
+.metronome__bpm {
+  color: var(--color-white);
+  font-size: 2rem;
+}
+.metronome__tempo-settings {
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  cursor: pointer;
+  margin-top: 4rem;
+}
+.metronome__tempo-btn {
+  position: relative;
+}
+.metronome__tempo-btn .one,
+.metronome__tempo-btn .two {
+  width: 2.8rem;
+  height: 0.6rem;
+  background-color: #9289a9;
+  display: block;
+}
+.metronome__tempo-btn .two {
+  transform: rotate(-90deg) translateX(6px);
+  position: absolute;
+}
+
+.form-control {
+  text-align: center;
+}
+.form-control input {
+  background: none;
+  border: none;
+  color: var(--color-white);
+  font-family: "Inter", sans-serif;
+  font-size: 12.8rem;
+  font-weight: 500;
+  width: 22rem;
+  height: 22rem;
+  text-align: inherit;
+  border: 2px solid var(--color-white);
+  border-radius: 50%;
+}
+.form-control input:focus {
+  outline: none;
+}
+.form-control label {
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: var(--color-white);
+  display: block;
+  margin-top: 1.5rem;
+}
+
+.form-control + .form-control {
+  margin-left: 6rem;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  padding-left: 7rem;
+}
+
+.bg-video {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: -1;
+  opacity: 30%;
+}
+
+.copyright {
+  color: var(--color-white);
+  font-size: 1.6rem;
+  position: absolute;
+  bottom: 2%;
+  right: 1%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.hide {
+  display: none !important;
+}
+
+:root {
+  --color-white: white;
+}
+
+html {
+  font-family: "Inter", sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  background: #63326e;
+  user-select: none;
 }
 
 /***** Range Reset *****/
@@ -198,55 +213,7 @@ input[type=range]:focus::-moz-range-thumb {
   outline: 3px solid var(--color-white);
 }
 
-.timer {
-  display: flex;
-  justify-content: center;
-}
-
-.form-control {
-  text-align: center;
-}
-.form-control input {
-  background: none;
-  border: none;
-  color: var(--color-white);
-  font-family: "Inter", sans-serif;
-  font-size: 12.8rem;
-  font-weight: 500;
-  width: 22rem;
-  height: 22rem;
-  text-align: inherit;
-  border: 2px solid var(--color-white);
-  border-radius: 50%;
-}
-.form-control input:focus {
-  outline: none;
-}
-.form-control label {
-  font-size: 2.4rem;
-  font-weight: 500;
-  color: var(--color-white);
-  display: block;
-  margin-top: 1.5rem;
-}
-
-.form-control + .form-control {
-  margin-left: 6rem;
-}
-
-.separator {
-  border-bottom: 2px solid var(--color-white);
-  margin: 5rem 0;
-}
-
-.copyright {
-  color: var(--color-white);
-  font-size: 1.6rem;
-  position: absolute;
-  bottom: 2%;
-  right: 1%;
-}
-
+/***** Input number styles *****/
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -257,6 +224,37 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+.title {
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 3.6rem;
+  position: absolute;
+  top: -2.5rem;
+  background-color: #543466;
+  padding: 0 1rem;
+  left: 3rem;
+}
+
+.container {
+  max-width: 72rem;
+  padding: 5rem 3rem;
+  margin: auto;
+  margin-top: 6rem;
+  border: 2px solid white;
+  border-radius: 2px;
+  position: relative;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.separator {
+  border-bottom: 2px solid var(--color-white);
+  margin: 5rem 0;
 }
 
 /*# sourceMappingURL=styles.css.map */

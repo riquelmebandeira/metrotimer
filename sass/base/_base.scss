@@ -1,0 +1,99 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.hide {
+  display: none !important;
+}
+
+:root {
+  --color-white: white;
+}
+
+html {
+  font-family: "Inter", sans-serif;
+  font-size: 62.5%; // 1rem = 10px;
+}
+
+body {
+  background: #63326e;
+  user-select: none;
+}
+
+/***** Range Reset *****/
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  max-width: 55rem;
+  width: 100%;
+}
+
+/***** Track Styles *****/
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="range"]::-webkit-slider-runnable-track {
+  background: var(--color-white);
+  height: 0.6rem;
+}
+
+/******** Firefox ********/
+input[type="range"]::-moz-range-track {
+  background: var(--color-white);
+  height: 0.6rem;
+}
+
+/***** Thumb Styles *****/
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -10px; /* Centers thumb on the track */
+  background-color: #9289a9;
+  height: 2.7rem;
+  width: 2.7rem;
+  border-radius: 50%;
+}
+
+/***** Firefox *****/
+input[type="range"]::-moz-range-thumb {
+  border: none; /*Removes extra border that FF applies*/
+  border-radius: 0; /*Removes default border-radius that FF applies*/
+  background-color: #9289a9;
+  height: 2.7rem;
+  width: 2.7rem;
+  border-radius: 50%;
+}
+
+/***** Focus Styles *****/
+/* Removes default focus */
+input[type="range"]:focus {
+  outline: none;
+}
+
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="range"]:focus::-webkit-slider-thumb {
+  border: 1px solid var(--color-white);
+  outline: 3px solid var(--color-white);
+}
+
+/******** Firefox ********/
+input[type="range"]:focus::-moz-range-thumb {
+  border: 1px solid var(--color-white);
+  outline: 3px solid var(--color-white);
+}
+
+/***** Input number styles *****/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}

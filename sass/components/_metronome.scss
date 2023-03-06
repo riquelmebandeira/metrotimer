@@ -1,0 +1,40 @@
+.metronome {
+  &__tempo-container {
+    margin-right: auto;
+  }
+
+  &__tempo {
+    color: var(--color-white);
+    font-size: 6.4rem;
+  }
+
+  &__bpm {
+    color: var(--color-white);
+    font-size: 2rem;
+  }
+
+  &__tempo-settings {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 4rem;
+  }
+
+  &__tempo-btn {
+    position: relative;
+
+    .one,
+    .two {
+      width: 2.8rem;
+      height: 0.6rem;
+      background-color: #9289a9;
+      display: block;
+    }
+
+    .two {
+      transform: rotate(-90deg) translateX(6px);
+      position: absolute;
+    }
+  }
+}
