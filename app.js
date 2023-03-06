@@ -89,10 +89,12 @@ function updateTimer() {
 const countdown = new Timer(updateTimer, 1000, { immediate: true })
 
 startTimerBtn.onclick = function () {
-  if (!isActive) {
+  if (!isActive && timeout) {
     countdown.totalTime = timeout
     countdown.start()
     isActive = true;
+  } else if (!isActive && !timeout) {
+    inputMinutes.select()
   } else {
     countdown.stop()
     isActive = false;

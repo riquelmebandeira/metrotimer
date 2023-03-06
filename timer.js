@@ -17,6 +17,13 @@ function Timer(callback, timeInterval, options) {
   };
 
   this.round = () => {
+    this.totalTime -= this.timeInterval;
+
+    if (this.totalTime < 1000) {
+      this.stop();
+      return
+    }
+
     let drift = Date.now() - this.expected;
 
     if (drift > this.timeInterval) {
@@ -27,14 +34,8 @@ function Timer(callback, timeInterval, options) {
 
     callback();
 
-    this.totalTime -= this.timeInterval;
-
-    if (this.totalTime <= 1000) {
-      this.stop();
-    } else {
-      this.expected += this.timeInterval;
-      this.timeout = setTimeout(this.round, this.timeInterval - drift);
-    }
+    this.expected += this.timeInterval;
+    this.timeout = setTimeout(this.round, this.timeInterval - drift);
   };
 }
 
