@@ -197,6 +197,14 @@ body {
   user-select: none;
 }
 
+a,
+a:active,
+a:visited {
+  color: var(--color-white);
+  text-decoration: none;
+  font-weight: 500;
+}
+
 /***** Range Reset *****/
 input[type=range] {
   -webkit-appearance: none;
