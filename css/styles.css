@@ -141,14 +141,13 @@
   }
 }
 .bg-video {
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  position: absolute;
-  z-index: -1;
   opacity: 30%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .copyright {
@@ -194,7 +193,6 @@ html {
 }
 
 body {
-  background: #63326e;
   user-select: none;
 }
 
@@ -289,7 +287,7 @@ input[type=number] {
   font-weight: 600;
   font-size: 3.6rem;
   position: absolute;
-  background-color: #543466;
+  background-color: #533466;
   padding: 0 1rem;
   top: -2.5rem;
   left: 3rem;
@@ -313,7 +311,6 @@ input[type=number] {
   max-width: 72rem;
   padding: 5rem 3rem;
   margin: auto;
-  margin-top: 6rem;
   border: 2px solid white;
   border-radius: 2px;
   position: relative;
@@ -329,11 +326,22 @@ input[type=number] {
   margin: 5rem 0;
 }
 
+#page {
+  padding: 6rem 0;
+  background: #63326e;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
 @media only screen and (max-width: 37.5em) {
   .container {
     border: none;
     padding: 0 2rem;
     margin-top: 0;
+  }
+  #page {
+    padding: 0;
   }
 }
 

@@ -14,66 +14,68 @@
     <title>Metrotimer</title>
   </head>
   <body>
-    <video autoplay muted loop id="myVideo" class="bg-video">
-      <source src="assets/video.mp4" type="video/mp4" />
-    </video>
+    <div id="page">
+      <video autoplay muted loop id="myVideo" class="bg-video">
+        <source src="assets/video.mp4" type="video/mp4" />
+      </video>
 
-    <div class="container">
-      <h1 class="title">MetroTimer</h1>
+      <div class="container">
+        <h1 class="title">MetroTimer</h1>
 
-      <div class="timer__display hide"></div>
-      <div class="timer">
-        <div class="form-control">
-          <input type="number" class="timer__input" value="00" id="minutes"/>
-          <label for="minutes">minutes</label>
-        </div>
-
-        <div class="form-control">
-          <input type="number" class="timer__input" value="00" id="seconds"/>
-          <label for="seconds">seconds</label>
-        </div>
-
-        <div class="action-btn" id="start-timer-btn">
-          <img src="assets/play.svg" alt="Start" class="play-icon" />
-          <img src="assets/pause.svg" alt="Stop" class="pause-icon" />
-        </div>
-      </div>
-
-      <div class="separator"></div>
-
-      <div class="metronome">
-        <div class="flex">
-          <div class="metronome__tempo-container">
-            <span class="metronome__tempo">100</span>
-            <span class="metronome__bpm">bpm</span>
+        <div class="timer__display hide"></div>
+        <div class="timer">
+          <div class="form-control">
+            <input type="number" class="timer__input" value="00" id="minutes"/>
+            <label for="minutes">minutes</label>
           </div>
 
-          <div class="action-btn" id="start-metronome-btn">
+          <div class="form-control">
+            <input type="number" class="timer__input" value="00" id="seconds"/>
+            <label for="seconds">seconds</label>
+          </div>
+
+          <div class="action-btn" id="start-timer-btn">
             <img src="assets/play.svg" alt="Start" class="play-icon" />
             <img src="assets/pause.svg" alt="Stop" class="pause-icon" />
           </div>
         </div>
 
-        <div class="metronome__tempo-settings">
-          <div class="metronome__tempo-btn decrease-btn">
-            <span class="one"></span>
+        <div class="separator"></div>
+
+        <div class="metronome">
+          <div class="flex">
+            <div class="metronome__tempo-container">
+              <span class="metronome__tempo">100</span>
+              <span class="metronome__bpm">bpm</span>
+            </div>
+
+            <div class="action-btn" id="start-metronome-btn">
+              <img src="assets/play.svg" alt="Start" class="play-icon" />
+              <img src="assets/pause.svg" alt="Stop" class="pause-icon" />
+            </div>
           </div>
-          <input
-            type="range"
-            value="100"
-            min="20"
-            max="500"
-            step="1"
-            class="metronome__tempo-slider"
-          />
-          <div class="metronome__tempo-btn increase-btn">
-            <span class="one"></span>
-            <span class="two"></span>
+
+          <div class="metronome__tempo-settings">
+            <div class="metronome__tempo-btn decrease-btn">
+              <span class="one"></span>
+            </div>
+            <input
+              type="range"
+              value="100"
+              min="20"
+              max="500"
+              step="1"
+              class="metronome__tempo-slider"
+            />
+            <div class="metronome__tempo-btn increase-btn">
+              <span class="one"></span>
+              <span class="two"></span>
+            </div>
           </div>
         </div>
       </div>
+      <p class="copyright">Designed and Developed By Riquelme Bandeira</p>
     </div>
-    <p class="copyright">Designed and Developed By Riquelme Bandeira</p>
     <script src="scripts/app.js" type="module"></script>
   </body>
 </html>

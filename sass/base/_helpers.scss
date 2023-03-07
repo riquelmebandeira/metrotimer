@@ -1,8 +1,7 @@
 .container {
   max-width: 72rem;
   padding: 5rem 3rem;
-  margin: auto;
-  margin-top: 6rem;
+  margin:  auto;
   border: 2px solid white;
   border-radius: 2px;
   position: relative;
@@ -18,10 +17,23 @@
   margin: 5rem 0;
 }
 
+#page {
+  padding: 6rem 0;
+  background: #63326e;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+
 @media only screen and (max-width: 37.5em) {
   .container {
     border: none;
     padding: 0 2rem;
     margin-top: 0;
+  }
+
+  #page {
+    padding: 0;
   }
 }
