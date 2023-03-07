@@ -111,6 +111,7 @@ function checkIfTimesUp() {
     if (isRunning) {
       metronome.stop()
       metronomeBtn.classList.toggle("on");
+      isRunning = false;
     }
   }
 }
