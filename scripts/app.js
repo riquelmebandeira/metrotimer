@@ -62,7 +62,7 @@ let minutes = 0;
 let seconds = 0;
 let timeout = 0;
 let isActive = false;
-const bell = new Audio('assets/bell.wav')
+const bell = new Audio('assets/bell.mp3')
 
 inputMinutes.onchange = function () {
   minutes = +inputMinutes.value;
